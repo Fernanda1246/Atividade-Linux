@@ -16,8 +16,7 @@ O Windows Subsystem for Linux (WSL) permite executar uma distribuição Linux no
 Habilitar o WSL:
 Abra o PowerShell como Administrador e execute:
 
-bash
-Copiar código
+
 wsl --install
 Escolher uma Distribuição Linux:
 Após reiniciar o computador, acesse a Microsoft Store e selecione uma distribuição Linux, como o Ubuntu 20.04 LTS.
@@ -28,8 +27,6 @@ Depois da instalação, abra a distribuição Linux escolhida (ex: Ubuntu), e co
 Atualizar o Sistema:
 No terminal da distribuição Linux, execute os seguintes comandos:
 
-bash
-Copiar código
 sudo apt update
 sudo apt upgrade
 2. Criação de uma Instância EC2 na AWS
@@ -47,8 +44,6 @@ Em Security Group, permita tráfego nas portas 22 (SSH) e 80 (HTTP).
 Conectar via SSH:
 Após a instância ser criada, obtenha o IP público da instância e use o comando SSH no terminal:
 
-bash
-Copiar código
 ssh -i "caminho/para/sua/chave.pem" ec2-user@ip-da-instancia
 3. Instalação do NGINX na Instância EC2
 Agora, vamos instalar o NGINX na instância EC2.
@@ -59,15 +54,12 @@ Se ainda não tiver feito isso, conecte-se à sua instância EC2 conforme descri
 Instalar o NGINX:
 Execute os seguintes comandos para atualizar o repositório de pacotes e instalar o NGINX:
 
-bash
-Copiar código
+
 sudo apt update
 sudo apt install nginx -y
 Iniciar o Serviço NGINX:
 Depois da instalação, inicie o serviço com:
 
-bash
-Copiar código
 sudo systemctl start nginx
 Verificar o Funcionamento:
 Abra o navegador e digite o IP público da instância EC2. Você verá a página padrão do NGINX.
